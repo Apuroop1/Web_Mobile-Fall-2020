@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <style>
+    button{
+      height: 100%;
+      width: 100%;
+    }
+  </style>
+  <meta charset="UTF-8">
+  <title>Calculator</title>
+
+</head>
+
+<body style="height: 100%">
+<div style="margin-left: 300px"><h2 style="color: white;">To Do App</h2></div>
+<br>
+<br>
+<br>
+<input style="margin-left: 100px" name="listname" #listname ngModel type="text">
+<button style="height:25px;width:40px" (click)="submitNewItem(listname.value)">Add</button>
+<br>
+<br>
+<br>
+<table style="color: white; width: 50%;margin-left: 100px" border="1">
+  <tr *ngFor="let item of items">
+    <td>
+      <span>{{item}}</span></td><td><button (click)="deleteItem(item)">delete</button></td>
+  </tr>
+</table>
+</body>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<body>
+
+<div style="margin-center: 300px"><h2 style="color: white;">CALCULATOR</h2>
+  <table border="1" style="width:500px;height:200px">
+    <tr>
+      <td colspan="4">
+        <span style="color:white">{{equation}}</span><br>
+        <span style="color:white">{{number}}</span></td>
+    </tr>
+    <tr>
+      <td><button (click)="butcick('1')">1</button></td>
+      <td><button (click)="butcick('2')">2</button></td>
+      <td><button  (click)="butcick('3')">3</button></td>
+      <td><button  (click)="butcick('/')">/</button></td>
+    </tr>
+    <tr>
+      <td><button  (click)="butcick('4')">4</button></td>
+      <td><button  (click)="butcick('5')">5</button></td>
+      <td><button  (click)="butcick('6')">6</button></td>
+      <td><button  (click)="butcick('*')">*</button></td>
+    </tr>
+    <tr>
+      <td><button  (click)="butcick('7')">7</button></td>
+      <td><button  (click)="butcick('8')">8</button></td>
+      <td><button  (click)="butcick('9')">9</button></td>
+      <td><button  (click)="butcick('+')">+</button></td>
+    </tr>
+    <tr>
+      <td><button  (click)="butcick('0')">0</button></td>
+      <td><button  (click)="butcick('=')">=</button></td>
+      <td><button style="background-color: red"  (click)="clear()">clear</button></td>
+      <td><button  (click)="butcick('-')">-</button></td>
+    </tr>
+  </table>
+</div>
+
+</body>
+</html>
